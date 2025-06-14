@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Centralised System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #007bff;
+    }
+
+    .status-grid {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .status, .tokens {
+      width: 45%;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    .yellow { background-color: #ffc107; }
+    .green { background-color: #28a745; }
+    .cyan { background-color: #17a2b8; }
+    .purple { background-color: #6f42c1; }
+
+    .admin-dashboard {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .admin-card {
+      background-color: #e9ecef;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .admin-card:hover {
+      background-color: #dee2e6;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      background-color: #dee2e6;
+      padding: 1rem;
+      border-radius: 12px;
+    }
+
+    .sidebar-item {
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="title">CENTRALISED SYSTEM</div>
+      <div class="status-grid">
+        <div class="status">
+          <div class="item">WAITING <span class="dot yellow"></span></div>
+          <div class="item">UNDER DIAGNOSIS <span class="dot green"></span></div>
+          <div class="item">IN OT <span class="dot cyan"></span></div>
+          <div class="item">DISCHARGED <span class="dot purple"></span></div>
+        </div>
+        <div class="tokens">
+          <div class="item"><span class="dot yellow"></span> A102</div>
+          <div class="item"><span class="dot green"></span> A101</div>
+          <div class="item"><span class="dot cyan"></span> C12</div>
+          <div class="item"><span class="dot purple"></span> A102</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">ADMIN DASHBOARD</div>
+      <div style="display: flex; gap: 1.5rem">
+        <div class="sidebar">
+          <div class="sidebar-item">DASHBOARD</div>
+          <div class="sidebar-item">SCHEDULING</div>
+          <div class="sidebar-item">TOKENS</div>
+          <div class="sidebar-item">INVENTORY</div>
+        </div>
+        <div class="admin-dashboard">
+          <div class="admin-card">Patients</div>
+          <div class="admin-card">OT booking</div>
+          <div class="admin-card">Alerts</div>
+          <div class="admin-card">Inventory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
